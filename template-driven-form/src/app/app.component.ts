@@ -8,6 +8,12 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
 @ViewChild('f')signupForm!:NgForm;
+answer:any='';
+answer1:any='';
+answer2:any='';
+
+
+defaultQuestion = 'pet'
   // onSubmit(form:NgForm){
   //   console.log(form);
   // }
