@@ -11,6 +11,7 @@ export class AppComponent {
 answer:any='';
 answer1:any='';
 answer2:any='';
+answer3:any='';
 model: any = {};
 formFields=["Tamil Nadu","Kerala"];
 genders =['male','female']
