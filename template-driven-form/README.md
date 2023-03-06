@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ <!-- Kreirajte formu sa sledecim input poljima i validacijama
+           1) Mail addresa - da bi bilo validno polje ne sme biti prazna i mora biti mail
+           2) Jedan propdown sa sledecim opcijama ("Basic", "Advanced", "Pro") setovati "Advanced"
+            kao default selektovan
+           3) Password input - mora da bude dodata neka vrednost, ne sme da bude prazno polje 
+           4) Submit Button
+
+           Prikazi poruku ukoliko je forma invalid i touched. 
+           Prikazati warning message ispod svakog polja ako je invalid
+
+           Kada se submituje forma trebalo bi da se isprinta value forme ili u consoli ili na templateu
+      -->
