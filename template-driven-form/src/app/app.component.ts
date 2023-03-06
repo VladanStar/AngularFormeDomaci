@@ -43,9 +43,9 @@ this.submitted=true;
 this.user.username=this.signupForm.value.userData.username;
 this.user.email=this.signupForm.value.userData.email;
 this.user.password=this.signupForm.value.userData.password;
-this.user.secretQuestion=this.signupForm.value.secret;
-this.user.answer=this.signupForm.value.answer;
-this.user.dropbox=this.signupForm.value.dropbox;
-this.user.gender=this.signupForm.value.gender;
+this.user.secretQuestion=this.signupForm.value.userData.secret;
+this.user.answer=this.signupForm.value.userData.answer;
+this.user.dropbox=this.signupForm.value.userData.dropbox;
+this.user.gender=this.signupForm.value.userData.gender;
 }
 }
