@@ -11,13 +11,14 @@ export class AppComponent {
 answer:any='';
 answer1:any='';
 answer2:any='';
-
-
+model: any = {};
+formFields=["Tamil Nadu","Kerala"];
+genders =['male','female']
 defaultQuestion = 'pet'
   // onSubmit(form:NgForm){
   //   console.log(form);
   // }
-
+  
 onSubmit(){
 console.log(this.signupForm)
 }
