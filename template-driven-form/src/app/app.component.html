@@ -33,6 +33,7 @@
               name="email"
               required
               email
+              [value]="email"
               #email="ngModel"
             />
             <p class="help-block" *ngIf="!email.valid && email.touched">
@@ -62,7 +63,7 @@
           </div>
           <!-- <p *ngIf="!userData.valid && userData.touched">User Data is not valid</p> -->
         </div>
-        <p *ngIf="!userData.valid && userData.touched">User Data is not valid</p>
+        <p *ngIf="!userData.valid && userData.touched">UserData is not valid</p>
         <div class="form-group my-4">
           <label for="secret">Secret Questions</label>
           <select 
@@ -82,23 +83,43 @@
             cols="10"
              rows="5"
             [(ngModel)]="answer"
+            name="answer"
              >
             </textarea>
         </div>
         <p>Your replay: {{answer}}</p>
 
-        
-     <!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div> -->
-
+        <div class="form-group">
+          <label for="drop">DropBox</label>
+          <hr>
+          <select 
+          id="drop"
+          [(ngModel)]="selectedOption"
+          name="dropbox"
+         [(ngModel)]="defaultDrop"
+          >
+            <option value="Basic">Basic</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Pro">Pro</option>
+          </select>
+        </div>
+        <hr>
+        <hr>
+<label for="g">Gender</label>
+<div class="radio" *ngFor="let gender of genders">
+  <label for="g" title="3">{{gender}}
+    <input
+      type="radio"
+      name="gender"
+      ngModel
+      [value]="gender"
+      title="#"
+      required
+      id="g"
+    />
+    <!-- {{ gender }} -->
+  </label>
+</div>
       
         <button
           class="btn btn-primary my-3"
@@ -108,6 +129,19 @@
           Submit
         </button>
       </form>
+    </div>
+  </div>
+  <hr />
+  <div class="row" *ngIf="submitted">
+    <div class="col-12">
+      <h3>Your Data</h3>
+      <p>UserName: {{ user.username }}</p>
+      <p>Email: {{ user.email }}</p>
+      <p>Password: {{ user.password }}</p>
+      <p>User secret:{{ user.secretQuestion }}</p>
+      <p>Answer: {{ user.answer }}</p>
+      <p>User DropBox: {{user.dropbox}}</p>
+      <p>User gender: {{ user.gender }}</p>
     </div>
   </div>
 </div>
