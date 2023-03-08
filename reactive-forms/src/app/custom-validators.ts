@@ -1,8 +1,10 @@
-import { ValidatorFn, AbstractControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
-export function ForbiddenNameValidator(forbiddenName: RegExp): ValidatorFn {
-  return (control: AbstractControl): { [key: string]: any } | null => {
-    const forbidden = forbiddenName.test(control.value);
-    return forbidden ? { 'forbiddenName': { value: control.value } } : null;
-  };
+export class CustomValidators {
+  static invalidProjectName(control: FormControl): { [s:string]:boolean | null} {
+    if (control.value === 'Test') {
+      return { 'invalidProjectName': true };
+    }
+    return null as any;
+  }
 }
